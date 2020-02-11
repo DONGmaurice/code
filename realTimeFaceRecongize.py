@@ -1,21 +1,12 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Apr  2 09:00:33 2019
-
-@author: GMDZ.DONG
-"""
-#%matplotlib qt5
-
 import cv2
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-
-
-cap = cv2.VideoCapture(0) # 使用第5个摄像头（我的电脑插了5个摄像头）
+cap = cv2.VideoCapture(0)
 # 加载人脸特征库
-face_cascade = cv2.CascadeClassifier('D:\\python\\Library\\etc\\haarcascades\\haarcascade_frontalface_default.xml');
+face_cascade = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml');
 #抑制人脸识别的边框.opencv会在我的人脸附近输出多个边框.
 #这两个变量用于记录最大值
 NonMaximum_suppression_h = 0;
