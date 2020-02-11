@@ -32,7 +32,7 @@ while(True):
             cv2.rectangle(frame, (x, y), (x + w, y + h), (255,0,0),2);# 用矩形圈出人脸
             portrait = frame[x-50:x+50,y-50:y+50];
             
-    cv2.imshow('Face Recognition',frame); 
+    cv2.imshow('Face Recognition',frame);
     
     if portrait.shape[0] > 90:
         plt.figure("face")
